@@ -1,0 +1,22 @@
+<head>
+  <title>my meteor 01.25</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor, ff!</h1>
+
+  {{> helloWorld}}
+</body>
+
+<template name="helloWorld">
+  <button>Click Me Here</button>
+  <p>
+    {{#each pictures}}
+    <div>
+      <img data-id={{_id}} src='{{pic}}' class="small-image"/>
+      <span><br/>{{time}}</span>
+    </div>
+    {{/each}}
+  </p>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
